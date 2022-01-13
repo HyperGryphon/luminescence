@@ -1,6 +1,6 @@
 # luminescence
 
-This is a repository for all scripts I've been using these last years. Most of them are pretty useless, pay attention to the most recent ones.
+This repository (/R) is for all scripts I've been using these last years. Most of them are pretty useless, pay attention to the most recent ones.
 
 If you have any doubts (and you'll have) please contact me.
 
