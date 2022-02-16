@@ -3,10 +3,10 @@ library(readxl)
 library(moments)
 rm(list = ls())
 graphics.off()
-setwd("C:/Users/iande/Documentos/proyectos/Colombia//")
+setwd("C:/Users/iande/Documentos/proyectos/services/maria chile/")
 #cargar los datos
-name = "L1242"
-sample = read_excel("Daniel_OSL_USP_3.xlsx", sheet = name, col_names = T)
+name = "L1520"
+sample = read_excel("pirir290_analyst.xlsx", sheet = name, col_names = T)
 #sample = read.table("16211-3_HF2x_130312-TEMP165.asc", header = T, sep = ",")
 par(mar = c(5,5,1.5,1.5))
 
@@ -133,10 +133,10 @@ plot_KDE(De.data, main = "", yaxt = "n", na.rm = T,
          yaxs = "i")
 
 #añadir lineas al kde plot
-#abline(v = mamres$de,
-#       col = "#387fda")
-#abline(v = camres$de,
-#       col = "black", lty = 2)
+abline(v = mamres$de,
+       col = "#387fda")
+abline(v = camres$de,
+       col = "black", lty = 2)
 
 #leyenda y texto de los age models
 maminfo = paste("MAM3: ", paste0(round(mamres$de, 2), " \U00B1 ",
@@ -164,7 +164,7 @@ fam = calc_FiniteMixture(De.data,
 
 #dev.off()
 #data.frame(camres$OD, kurtosis(De.data$na.omit.df.De.), skewness(De.data$na.omit.df.De.))
-camres$OD
+camres$rel_OD
 data.frame(mean(na.omit(df1$d0)), sd(na.omit(df1$d0)),
            mean(na.omit(df1$recy)), sd(na.omit(df1$recy)),
            mean(na.omit(df1$recu)), sd(na.omit(df1$recu)),
